@@ -1,0 +1,40 @@
+# Copyright (c) 2016-2017 Arduino Srl.  All right reserved.
+#
+
+#menu.upload=Upload
+
+#####################################
+########### ARDUINO NRF52832 ###########
+
+dmtech.name=nRF52832
+dmtech.vid.0=0x2a03
+dmtech.pid.0=0x805a
+
+#primo.menu.upload.serial=via Serial
+#primo.menu.upload.bluetooth=via Bluetooth
+#primo.menu.upload.bluetooth.upload.tool=otable
+
+dmtech.upload.tool=openocd
+dmtech.upload.protocol=sam-ba
+dmtech.upload.maximum_size=385024
+dmtech.upload.use_1200bps_touch=false
+dmtech.upload.speed=115200
+dmtech.upload.wait_for_upload_port=false
+
+dmtech.build.mcu=cortex-m4
+dmtech.build.f_cpu=64000000L
+dmtech.build.usb_product="Arduino Primo"
+dmtech.build.board=NRF52_PRIMO
+dmtech.build.core=arduino
+dmtech.build.extra_flags=-mthumb -DESP_CH_SPI
+dmtech.build.ldscript=linker_scripts/gcc/flash.ld
+dmtech.build.openocdscript=openocd_scripts/arduino_openocd.cfg
+dmtech.build.variant=arduino_dmtech
+dmtech.build.components=components
+dmtech.build.vid=0x2a03
+dmtech.build.pid=0x805a
+
+dmtech.bootloader.file=primo/bootloader_primo_v1.0.0.hex
+dmtech.firmware.softdevice.file=primo/softdevice/s132_nrf52_2.0.0_softdevice.hex
+
+dmtech.bootloader.tool = openocd
